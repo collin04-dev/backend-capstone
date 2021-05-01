@@ -1,0 +1,58 @@
+<br/>
+  <div class="row align-items-md-stretch">
+      <div class="col-sm-6">
+        <div class="p-5 text-white bgdark border rounded-3">
+            {{#if flashes}}
+              {{#each flashes}}
+                <h3>{{ this }}</h3>
+              {{/each}}
+              {{else}} <h3>Sign Up For Notifications</h3>
+            {{/if}}
+            <br/>
+            <form action="/addUser" method="POST">
+                <p>
+                    <label for="firstName" class="form-label text-white">Name</label>
+                    <input type="text" name="firstName" id = "firstName"value='{{ user.firstName }}'/> <br/>
+                    <label for="phoneNumber" class="form-label text-white">Phone Number</label>
+                    <input type="tel" name="phoneNumber" id="phoneNumber" value='{{ user.phoneNumber }}'/> <br/>
+                    <input name='id' type='hidden' value='{{ user._id }}' /> <br/>
+                    <button type="submit" class="btn btn-outline-success">{{#if user}}Update{{else}}Add{{/if}} User</button>
+                </p>
+            </form>
+          <img class="card-img-bottom imgc" src="https://images.unsplash.com/photo-1596501048476-a1a82b32959a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=947&q=80" alt="Asteroid">
+
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="h-100 p-5 text-white bgdark border rounded-3">
+          <h2>What does it do?</h2>
+          <p>This is a very simple messaging service. All you do is enter in your Name and Phone Number, and you will start receiving notifications 
+            about objects that are currently close to Earth's Orbit! Everyday you will receive a text message that will include the following information: 
+            How many objects are currently close to Earth on the current day, the name of one of these objects along with its speed, diameter, and the day it will 
+            be closest to Earth!
+          </p>
+          <img class="card-img-bottom rounded-4" src="https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Astronauts">
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Admin register -->
+    <!--
+    <p>
+    <h3>Register an  Admin</h3>
+    <form action="/register" method="post">
+        Email
+        <input type="email" name="email" id="email">
+        Password
+        <input type="password" name="password" id="password">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+
+    </p>
+  -->
+
+  <footer class="mt-auto text-white-50">
+    <p>Devloped By Jacob Collins</p>
+  </footer>

@@ -1,0 +1,25 @@
+
+
+<br/>
+<div class="text-center">
+<div class="card text-white bg-dark mb-3 mx-auto" style="max-width: 30rem;">
+  <div class="card-header"><h1>{{#if user}}Update{{else}}Add{{/if}} A User</h1></div>
+  <div class="card-body">
+    <form action="/adminAddUser" method="POST">
+    <p>
+        <label for="firstName" class="form-label text-white">First Name</label>
+        <input type="text" name="firstName" id = "firstName"value='{{ user.firstName }}'/> <br/>
+        <label for="phoneNumber" class="form-label text-white">Phone Number</label>
+        <input type="tel" name="phoneNumber" id="phoneNumber" value='{{ user.phoneNumber }}'/> <br/>
+        <input name='id' type='hidden' value='{{ user._id }}' /> <br/>
+        <button type="submit" class="btn btn-outline-success">{{#if user}}Update{{else}}Add{{/if}} User</button>
+    </p>
+    </form>
+  </div>
+  <div class="row">
+      <div class="col-sm-6"><a class="btn btn-outline-primary"href="/">Home</a></div>
+      <div class="col-sm-6"><a class="btn btn-outline-warning"href="/userList">List</a></div>
+  </div>
+  <br/>
+</div>
+</div>

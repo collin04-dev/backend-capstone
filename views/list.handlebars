@@ -1,0 +1,46 @@
+
+<br/>
+<h1> {{ header }}</h1>
+
+<br/>
+
+<table class="table table-bordered table-dark table-striped">
+    <thead class="text-white">
+    <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    {{#each users}}
+        <tbody class="text-white">
+        <tr>
+            <td>{{ this.firstName }}</td>
+            <td>{{ this.phoneNumber }}</td>
+            <td><a class="btn btn-outline-success" href="/messageUser/{{ this._id }}">Message User</a></td>
+            <td><a class="btn btn-outline-primary" href="/update/{{ this._id }}">Edit User</a></td>
+            <td><a class="btn btn-outline-danger"href="/delete/{{ this._id }}">Delete User</a></td>
+        </tr>
+        </tbody>
+    {{/each}}
+
+
+</table>
+<br/>
+<div class="card bg-dark border-primary">
+  <div class="card-body">
+        <div class="row">
+        <div class="col-md-3"><a class="btn btn-outline-primary"href="/">Home</a></div>
+        <div class="col-md-3"><a class="btn btn-outline-success"href="/messageAllUsers">Message All Users</a></div>
+        <div class="col-md-3"><a class="btn btn-outline-warning" href="/add">Add A User</a></div>
+        <div class="col-md-3"><a class="btn btn-outline-danger" href="/logout">Logout</a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Future HTML/Handlebars for rendering the student list -->
